@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {/* <ThemeProvider> */}
-        <div className="min-h-screen bg-blue-900 text-white">
+        <div className="min-h-screenb bg-slate-900 text-white">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
