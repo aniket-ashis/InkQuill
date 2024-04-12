@@ -1,5 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "@/components/Footer";
+// import ThemeContextProvider from "../context/ThemeContext.jsx";
+// import ThemeProvider from "@/provider/ThemeProvider";
+import { ThemeProvider } from "../provider/ThemeProvider.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,44 +17,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen bg-blue-500 text-white">
-        <div className="sm:max-w-[1080px] md:max-w-[1920px] ml-auto mr-auto xs:px-[40px] sm:px-[40px] md:px-[80px]">
-          {children}
-          </div>
-          </div>
+        {/* <ThemeProvider> */}
+        <div className="min-h-screen bg-blue-900 text-white">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <div className="sm:max-w-[1080px] md:max-w-[1920px] ml-auto mr-auto xs:px-[40px] sm:px-[40px] md:px-[80px]">
+              {children}
+              <Footer />
+            </div>
+            
+          </ThemeProvider>
+        </div>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 }
