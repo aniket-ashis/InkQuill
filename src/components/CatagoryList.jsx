@@ -19,16 +19,17 @@ const data = [
     catagory: "Development",
     image: "/development.jpg",
   },
+  
 ];
 
 const CatagoryList = () => {
   return (
-    <div className="flex flex-col text-center p-5 w-full gap-5">
+    <div className="flex flex-col flex-wrap text-center p-5 w-full gap-5">
       <h1 className="text-5xl font-bold p-5">Popular catagories</h1>
-      <div className="catagory-list flex justify-around">
+      <div className="catagory-list flex flex-wrap justify-around">
         {data.map((data) => (
           <>
-            <div className="catagory-item flex gap-2 p-5 bg-blue-700 rounded-full h-[50px] items-center">
+            <div className="catagory-item  flex gap-2 p-5 bg-blue-700 rounded-full m-2 h-[50px] items-center ">
               <Image src={data.image} alt="" width={30} height={30} className="rounded-full"/>
               <Link href="/" className="text-xl font-mono font-bold">{data.catagory}</Link>
             </div>

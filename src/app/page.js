@@ -9,9 +9,12 @@ export default function Home() {
     <div className=" p-6">
       <Featured />
       <CatagoryList />
-      <div>
+      <div className="flex p-2">
         <CardList />
-        <Menu />
+        <div className="ml-3">
+          <Menu />
+          {/* <CatagoryList/> */}
+        </div>
       </div>
     </div>
   );
