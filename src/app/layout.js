@@ -28,9 +28,8 @@ export default function RootLayout({ children }) {
             <Navbar />
             <div className="sm:max-w-[1080px] md:max-w-[1920px] ml-auto mr-auto xs:px-[40px] sm:px-[40px] md:px-[80px]">
               {children}
-              <Footer />
             </div>
-            
+            <Footer />
           </ThemeProvider>
         </div>
         {/* </ThemeProvider> */}
